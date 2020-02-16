@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --second-color: #dddddd;
+  --first-color: black;
+  --third-color: green;
+}
+
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  background: radial-gradient(white, var(--second-color));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2%;
+}
+
+h1 {
+  color: var(--first-color);
+}
+
+p {
+  text-align: center;
+}
+
+.btn {
+  color: white;
+  font-size: 18px;
+
+  background-color: var(--first-color);
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  padding: 8px 10px;
+  outline: none;
+  margin: 10px 5px 8px 5px;
+  box-shadow: 5px 5px 10px 1px rgb(97, 97, 97); /* box-shadow:h-offset v-offset blur spread color ; */
+}
+
+.btn:hover {
+  background-color: rgb(39, 39, 39);
+}
+
+.btn:active {
+  margin: 12px 5px 6px 5px;
+  box-shadow: 0 0px 0px black;
+}
+
+.money-img {
+  width: 150px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 6s linear infinite;
+}
+
+.money-img:hover {
+  width: 200px;
+}
+
+.currency {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currency select {
+  padding: 10px 20px;
+  border: 0px solid #dedede;
+  border-radius: 0px;
+  font-size: 16px;
+  background: transparent;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-position: right 8px top 50%, 0, 0;
+  background-size: 12px auto, 100%;
+  background-repeat: no-repeat;
+
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.currency input {
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  text-align: right;
+  outline: none;
+}
+
+.swap-rate-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rate {
+  color: var(--first-color);
+  font-size: 14px;
+  padding: 0px 10px;
+}
+
+@media (max-width: 600px) {
+  .currency input {
+    width: 200px;
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
