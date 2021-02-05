@@ -38,13 +38,13 @@ button {
   justify-content: space-between;
   font-weight: bold;
   font-size: 14px;
+  border: 1px solid black;
   transition: all ease-out 0.1s;
 }
 
 button:hover {
   transform: scale(1.15);
   background-color: rgb(241, 241, 241);
-  border: none;
 }
 
 button:focus {
@@ -79,7 +79,7 @@ h3 {
 
 .person {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 20px;
   margin-bottom: 10px;
 }
